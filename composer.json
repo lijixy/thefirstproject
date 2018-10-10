@@ -1,0 +1,11 @@
+{
+    "name": "vendor/wmstest",
+    "description": "项目wmstest的描述。",
+    "authors": [
+        {
+            "name": "Mark",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {}
+}

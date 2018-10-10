@@ -1,0 +1,201 @@
+	<!-- Imported scripts on this page -->
+<!-- 	<script src="__STATIC__/js/jquery-validate/jquery.validate.min.js"></script>
+	<link rel="stylesheet" href="__STATIC__/css/xenon-forms.css"> -->
+
+
+
+
+<form class="validate add-form" novalidate="novalidate">
+
+	<div class="row">	
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">产品编号</label>
+				<input type="text" class="form-control" name="sn" placeholder="产品编号" value="{:uniqid()}">
+			</div>	
+			<div class="form-group">
+				<label for="field-2" class="control-label">产品名称</label>
+				
+				<input type="text" class="form-control" name="name" placeholder="产品名称" >
+			</div>	
+		</div>
+<!--
+		<div class="col-md-6">
+
+
+		<div id="uploader-demo"  style="display:block;">
+
+		    <div id="fileList" class="uploader-list"></div>
+		    <div id="filePicker" style="border:1px solid #ccc;width:130px;height:130px;float:right;"></div>
+		</div>
+
+		<style>
+			
+			.webuploader-pick,.webuploader-pick img{
+				display:block;
+				width:100px;
+				height:100px;
+				background:url(__STATIC__/images/upload.png);
+			}
+		</style>
+
+		<script src="__STATIC__/upload/webuploader.min.js"></script>
+		<script>
+
+			// 初始化Web Uploader
+			var uploader = WebUploader.create({
+
+			    // 选完文件后，是否自动上传。
+			    auto: true,
+
+			    // swf文件路径
+			    swf: '__STATIC__' + '/upload/Uploader.swf',
+
+			    // 文件接收服务端。
+			    server: "{:url('upload')}",
+
+			    // 选择文件的按钮。可选。
+			    // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+			    pick: '#filePicker',
+
+			    // 只允许选择图片文件。
+			    accept: {
+			        title: 'Images',
+			        extensions: 'gif,jpg,jpeg,bmp,png',
+			        mimeTypes: 'image/*'
+			    }
+			});
+
+			// 文件上传成功，给item添加成功class, 用样式标记上传成功。
+			uploader.on( 'uploadSuccess', function( file,response ) {
+				// console.log(file);
+				console.log(response);
+				var tpl = '<img src=" __PUBLIC__/uploads/'+response+' "/>';
+				$('.webuploader-pick').html(tpl);
+			    // $( '#'+file.id ).addClass('upload-state-done');
+			});
+
+		</script>
+
+	</div>
+	
+-->
+
+
+<!-- 	<div class="row">	
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">产品编号</label>
+				
+				<input type="text" class="form-control" name="sn" placeholder="产品编号" value="{:uniqid()}">
+			</div>	
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">产品名称</label>
+				
+				<input type="text" class="form-control" name="name" placeholder="产品名称" >
+			</div>	
+		</div>
+	</div> -->
+
+	<div class="row">	
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">厂家编号</label>
+				<input type="text" class="form-control" name="cjsn" placeholder="厂家编号" value="">
+			</div>	
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">内部编号</label>
+				
+				<input type="text" class="form-control" name="nbsn" placeholder="内部编号" >
+			</div>	
+		</div>
+	</div>
+
+        <div class="row">	
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">进货时间</label>
+				<input type="text" class="form-control" name="importtime" placeholder="#年#月#日" value="">
+			</div>	
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">进货数量</label>
+				
+				<input type="text" class="form-control" name="importnum" placeholder="请输入数字" >
+			</div>	
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group">
+                <label class="control-label">是否可用</label>
+                <select class="form-control" name="status">
+                    <option value="1" >可用</option>
+
+                    <option value="0">不可用</option>
+
+
+                </select>  
+	     </div>	
+		</div> 
+		<div class="col-md-6">
+			<div class="form-group">
+                <label class="control-label">产品属性</label>
+                <select class="form-control" name="category">
+                    	<option value="最新">最新</option>
+                        <option value="维持">维持</option>
+                        <option value="旧">旧</option>
+
+                </select>  
+			</div>	
+		</div> 
+    </div>
+
+
+
+	<div class="row">	
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">产品规格</label>
+				
+				<input type="text" class="form-control" name="spec" placeholder="产品规格" value="">
+			</div>	
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">产品价格</label>
+				
+				<input type="text" class="form-control" name="price" placeholder="产品价格" >
+			</div>	
+		</div>
+	</div>
+<!-- 
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+                <label class="control-label">产品状态</label>
+                <select class="form-control" name="status">
+                    <option value="0"  >正常</option>
+                    <option value="1"  >废弃</option>
+                </select>  
+			</div>	
+		</div> 
+    </div> -->
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group no-margin">
+				<label for="field-7" class="control-label">备注</label>
+				
+				<textarea class="form-control autogrow" name="desc" placeholder="备注" style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 50px;"></textarea>
+			</div>	
+		</div>
+	</div>
+
+</form>

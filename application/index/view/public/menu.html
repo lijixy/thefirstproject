@@ -1,0 +1,60 @@
+<?php
+$request= \think\Request::instance();
+$getAdminRole= session("adminRole");
+?>                {eq name="$getAdminRole" value="1"}
+				<ul id="main-menu" class="main-menu">
+                                    <li>
+							<a href="{:url('index/index')}">
+								<i class="linecons-cog"></i>
+								<span class="title">基本设置</span>
+							</a>
+                                                        <ul>
+									<li class="Customer-index">
+										<a href="{:url('customer/index')}"><span class="title">客户管理</span></a>
+									</li>
+							</ul>
+							<ul>
+									<li class="Product-index">
+										<a href="{:url('product/index')}"><span class="title">产品管理</span></a>
+									</li>
+							</ul>
+
+						</li>
+						<li>
+							<a href="{:url('index/index')}">
+								<i class="linecons-note"></i>
+								<span class="title">订单管理</span>
+							</a>
+							<ul>
+									<li class="Order-index">
+										<a href="{:url('order/index')}"><span class="title">订单查询</span></a>
+									</li>
+							</ul>
+
+						</li>
+			
+				</ul>
+                            {/eq}
+                            {eq name="$getAdminRole" value="2"}
+				<ul id="main-menu" class="main-menu">
+						<li>
+							<a href="{:url('Orderconfirm/index')}">
+								<i class="linecons-note"></i>
+								<span class="title">订单审核</span>
+							</a>
+							<ul>
+									<li class="Orderconfirm-index">
+										<a href="{:url('Orderconfirm/index')}"><span class="title">订单查询</span></a>
+									</li>
+							</ul>
+
+						</li>
+			
+				</ul>
+                            {/eq}
+<script>
+	var className = '{$request->controller()}-{$request->action()}'
+	$("."+className).addClass('active');
+	$("."+className).parent().parent().addClass('active open');
+	$("."+className).parent().show();
+</script>
