@@ -16,6 +16,33 @@
 		
 		</div>
 	</div>
+    
+    
+    	<div class="row">	
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">订单类型</label>
+                                 <select class="form-control" name="order_type">
+                                        <option value="1" {eq name="$info.order_type" value="1"}selected="selected" {/eq} >国外订单</option>
+                                        <option value="2" {eq name="$info.order_type" value="2"}selected="selected" {/eq} >国内订单</option>
+                                 </select>
+				
+			</div>	
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">付款方式</label>
+                                 <select class="form-control" name="pay_type">
+                                        <option value="1" {eq name="$info.pay_type" value="1"}selected="selected" {/eq}  >银行账号</option>
+                                        <option value="2" {eq name="$info.pay_type" value="2"}selected="selected" {/eq} >Paypal</option>
+                                        <option value="3" {eq name="$info.pay_type" value="3"}selected="selected" {/eq}  >支付宝</option>
+                                        <option value="4" {eq name="$info.pay_type" value="4"}selected="selected" {/eq}  >个人账号</option>
+                                 </select>
+			</div>	
+		</div>
+	</div>	    
+    
+    
 
 	<div class="row">	
 		<div class="col-md-6">
@@ -34,6 +61,23 @@
 				<label for="field-2" class="control-label">商品数量</label>
 				
                                 <input type="text" class="form-control" name="goods_number" placeholder="商品数量" value="{$info.goods_number}" >
+			</div>	
+		</div>
+	</div>	
+    
+        	<div class="row">	
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">单价</label>
+                                <input type="text" class="form-control" name="money_price" placeholder="单价" value="{$info.money_price}" >
+				
+			</div>	
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">合计金额</label>
+				
+                                <input type="text" class="form-control" name="money_count" placeholder="合计金额" value="{$info.money_count}" >
 			</div>	
 		</div>
 	</div>	

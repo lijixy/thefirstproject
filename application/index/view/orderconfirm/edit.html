@@ -16,12 +16,36 @@
 		
 		</div>
 	</div>
+    
+        	<div class="row">	
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">订单类型</label>
+                                 <select class="form-control" name="order_type" disabled="disabled">
+                                        <option value="1" {eq name="$info.order_type" value="1"}selected="selected" {/eq} >国外订单</option>
+                                        <option value="2" {eq name="$info.order_type" value="2"}selected="selected" {/eq} >国内订单</option>
+                                 </select>
+				
+			</div>	
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">付款方式</label>
+                                 <select class="form-control" name="pay_type" disabled="disabled">
+                                        <option value="1" {eq name="$info.pay_type" value="1"}selected="selected" {/eq}  >银行账号</option>
+                                        <option value="2" {eq name="$info.pay_type" value="2"}selected="selected" {/eq} >Paypal</option>
+                                        <option value="3" {eq name="$info.pay_type" value="3"}selected="selected" {/eq}  >支付宝</option>
+                                        <option value="4" {eq name="$info.pay_type" value="4"}selected="selected" {/eq}  >个人账号</option>
+                                 </select>
+			</div>	
+		</div>
+	</div>	 
 
 	<div class="row">	
 		<div class="col-md-6">
 			<div class="form-group">
 				<label for="field-2" class="control-label">商品编号</label>
-                                 <select class="form-control" name="product_no">
+                                 <select class="form-control" name="product_no" disabled="disabled">
                                 {volist name='productList' id='vo'}
                                         <option value="{$vo.sn}" {eq name="$vo.sn" value="$info.product_no"}selected="selected" {/eq} >{$vo.sn}--{$vo.name}</option>
                                 {/volist}
@@ -33,7 +57,26 @@
 			<div class="form-group">
 				<label for="field-2" class="control-label">商品数量</label>
 				
-                                <input type="text" class="form-control" name="goods_number" placeholder="商品数量" value="{$info.goods_number}" >
+                                <input type="text" class="form-control" name="goods_number" placeholder="商品数量" value="{$info.goods_number}" disabled="disabled">
+			</div>	
+		</div>
+	</div>	
+    
+    
+        
+        	<div class="row">	
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">单价</label>
+                                <input type="text" class="form-control" name="money_price" placeholder="单价" value="{$info.money_price}" disabled="disabled" >
+				
+			</div>	
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="field-2" class="control-label">合计金额</label>
+				
+                                <input type="text" class="form-control" name="money_count" placeholder="合计金额" value="{$info.money_count}" disabled="disabled" >
 			</div>	
 		</div>
 	</div>	
@@ -43,14 +86,14 @@
 			<div class="form-group">
 				<label for="field-2" class="control-label">订单来源</label>
 				
-				<input type="text" class="form-control" name="referer" placeholder="订单来源" value="{$info.referer}" >
+				<input type="text" class="form-control" name="referer" placeholder="订单来源" value="{$info.referer}" disabled="disabled" >
 			</div>	
 		</div>
 		<div class="col-md-6">
 			<div class="form-group">
 				<label for="field-2" class="control-label">制单人</label>
 				
-                                <input type="text" class="form-control" name="order_editer" placeholder="制单人" value="{$info.order_editer}" >
+                                <input type="text" class="form-control" name="order_editer" placeholder="制单人" value="{$info.order_editer}" disabled="disabled" >
 			</div>	
 		</div>
 	</div>
@@ -61,7 +104,7 @@
 			
 			<div class="form-group">
                 <label class="control-label">订单状态</label>
-                <select class="form-control" name="status">
+                <select class="form-control" name="status" disabled="disabled">
                     <option value="0" >正常</option>
                     <option value="1" {eq name="$info.status" value="1"}selected="selected" {/eq} >废弃</option>
                 </select>  

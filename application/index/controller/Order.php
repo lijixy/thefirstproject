@@ -55,6 +55,10 @@ class Order extends Controller {
             $product['order_editer'] = $param['order_editer'];
             $product['status'] = $param['status'];
             $product['remark'] = $param['remark'];
+            $product['order_type'] = $param['order_type'];
+            $product['pay_type'] = $param['pay_type'];
+            $product['money_count'] = $param['money_count'];
+            $product['money_price'] = $param['money_price'];
             $product['add_time'] = time();
             if (Db::table("order_info")->insert($product)) {
                 return ['error' => 0, 'msg' => '添加订单成功'];
@@ -86,6 +90,10 @@ class Order extends Controller {
                         'referer' => $param['referer'],
                         'order_editer' => $param['order_editer'],
                         'status' => $param['status'],
+                        'pay_type' => $param['pay_type'],
+                        'order_type' => $param['order_type'],
+                        'money_count' => $param['money_count'],
+                        'money_price' => $param['money_price'],
                         'remark' => $param['remark'],
                     ])) {
                 return ['error' => 0, 'msg' => '修改成功'];
