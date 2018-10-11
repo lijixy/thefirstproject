@@ -13,13 +13,13 @@ return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址
-    'hostname'        => 'blockchain.cy2puhtzyjb7.ap-southeast-1.rds.amazonaws.comm',
+    'hostname'        => 'blockchain.cy2puhtzyjb7.ap-southeast-1.rds.amazonaws.com',
     // 数据库名
     'database'        => 'wms',
     // 用户名
     'username'        => 'root',
     // 密码
-    'password'        => 'root',
+    'password'        => 'ellipal#2018#',
     // 端口
     'hostport'        => '3306',
     // 连接dsn
