@@ -17,7 +17,7 @@ return [
     // 数据库名
     'database'        => 'wms',
     // 用户名
-    'username'        => 'root',
+    'username'        => 'ellipalbc',
     // 密码
     'password'        => 'ellipal#2018#',
     // 端口
