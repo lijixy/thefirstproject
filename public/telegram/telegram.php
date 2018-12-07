@@ -1,5 +1,6 @@
 <?php
 $bot_api_key = 'CHANGE HERE';
+/*
 function send_get($urlstring){
  $ch = curl_init();
  curl_setopt($ch, CURLOPT_URL, $urlstring);
@@ -9,12 +10,16 @@ function send_get($urlstring){
  $result = curl_exec($ch);
  curl_close($ch); return $result;
 }
+*/
 $text = @$_GET["text"];
 $tgid = @$_GET["tgid"];
+print($text);
+/*
 if($text){
  $url = "https://api.telegram.org/bot$bot_api_key/sendMessage?chat_id=$tgid&text=$text";
  echo send_get($url);
 }else{
  echo "Please Input";
 }
+*/
 ?>
