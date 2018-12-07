@@ -17,6 +17,7 @@ $text = @$_GET["text"];
 if($text){
 	//curl  "https://api.telegram.org/bot609116902:AAHT0wmU_k1ICQ6s3aLQBpaoEUy4CDSXhcY/sendMessage?chat_id=613744501&text=李记哥哥"
 	$url="https://api.telegram.org/bot609116902:AAHT0wmU_k1ICQ6s3aLQBpaoEUy4CDSXhcY/sendMessage?chat_id=613744501&text=ellipal";
+	echo $curl;
 	//$url="https://api.telegram.org/".$bot_api_key."/sendMessage?chat_id=613744501&text=".$text;
 	$get_send_result=send_get_message($url);
 	echo $get_send_result;
