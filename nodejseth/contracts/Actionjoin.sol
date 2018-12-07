@@ -1,5 +1,4 @@
 pragma solidity ^0.4.24;
-
 contract Actionjoin {
     // 抽奖参数
     // 抽检的开始时间 和 结束时间 （以秒为单位的出块时间）
@@ -39,7 +38,8 @@ contract Actionjoin {
         if(actionSetAddr!=msg.sender){
             return ;
         }
-        require(startTime!=0,"starttime is not correct!");
+        require(startTime>now,"starttime is not correct!");
+        
         currentActionTime=startTime;
         actionSetAddr=msg.sender;
     } 
@@ -48,7 +48,7 @@ contract Actionjoin {
         //过滤开奖账号
         require(actionSetAddr!=msg.sender,"joiner is the owner!");
         //判断活动时间是否有效
-        require(currentActionTime!=0,"action is not started!");
+        require(currentActionTime>now,"action is not started!");
         //require(now<currentActionTime,"action is not ended!");
         //大于1个eth转账 才可以参与
         require(msg.value>=1500000000000000000,"amount is not enough 1.5 eth!");
@@ -58,7 +58,7 @@ contract Actionjoin {
         //require(activityEndTime==0,"activity is not started!");
         //判断转账是否发生在互动期限期间
         //require(block.timestamp<activityEndTime,"activity is allready done!");
-        //actionSetAddr.send(msg.value);
+        //actionSetAddr.transfer(msg.value);
         
         joinActivity[count]=msg.sender;
         joinPeoples[lastJoinNum++]=msg.sender;   //lastJoinNum当前参与的所有人数
