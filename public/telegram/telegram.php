@@ -1,5 +1,5 @@
 <?php
-$bot_api_key="727078481:AAFd56a-Za91ZN7e7V8-1i3FexMThfgstVM";
+$bot_api_key="7bot609116902:AAHT0wmU_k1ICQ6s3aLQBpaoEUy4CDSXhcY";
 function send_get_message($url){
 	$ch=curl_init();
 	curl_setopt($ch,CURLOPT_ERL,$url);
@@ -13,15 +13,16 @@ function send_get_message($url){
 
 
 $text = @$_GET["text"];
-$tgid = @$_GET["tgid"];
+//$tgid = @$_GET["tgid"];
 if($text){
-	$url="https://api.telegram.org/bot".$bot_api_key."/sendMessage?chat_id=$tgid&text=".$text;
+	//curl  "https://api.telegram.org/bot609116902:AAHT0wmU_k1ICQ6s3aLQBpaoEUy4CDSXhcY/sendMessage?chat_id=613744501&text=李记哥哥"
+	$url="https://api.telegram.org/".$bot_api_key."/sendMessage?chat_id=613744501&text=".$text;
 	$get_send_result=send_get_message($url);
 	echo $get_send_result;
 }
 /*
 if($text){
- $url = "https://api.telegram.org/bot$bot_api_key/sendMessage?chat_id=$tgid&text=$text";
+ $url = "https://api.telegram.org/bot609116902:AAHT0wmU_k1ICQ6s3aLQBpaoEUy4CDSXhcY/sendMessage?chat_id=252300608&text=fdffasd";
  echo send_get($url);
 }else{
  echo "Please Input";
