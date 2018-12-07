@@ -2,7 +2,7 @@
 $bot_api_key="7bot609116902:AAHT0wmU_k1ICQ6s3aLQBpaoEUy4CDSXhcY";
 function send_get_message($url){
 	$ch=curl_init();
-	curl_setopt($ch,CURLOPT_ERL,$url);
+	curl_setopt($ch,CURLOPT_URL,$url);
 	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
