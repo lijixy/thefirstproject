@@ -1,5 +1,6 @@
 import requests
 import json
+import sys
 sys.path.append(r'/data/wwwroot/wallet/storage/pythonconfig')
 from config import configinit
 
@@ -31,6 +32,7 @@ if __name__=="__main__":
 
     if int(getLastNum)>int(getHistoryNum):
         result=botApi.senMessage(chat_id,message="Hello-new-people!")
+        r.set("telegramNum",getLastNum)
         if result:
             print "new people!"
             quit()
