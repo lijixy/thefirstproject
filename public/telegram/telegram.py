@@ -29,14 +29,11 @@ if __name__=="__main__":
 
     botApi=botApi()
     getLastNum=botApi.getGroupNumberNow(chat_id)
+    r.set("telegramNum",getLastNum)
 
     if int(getLastNum)>int(getHistoryNum):
         result=botApi.senMessage(chat_id,message="Hello-new-people!")
-        r.set("telegramNum",getLastNum)
         if result:
             print "new people!"
             quit()
-
-
-
     print "link over!"
