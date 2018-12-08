@@ -25,10 +25,12 @@ if __name__=="__main__":
     confignew = configinit()
     r = confignew.getRedisInit()
     getHistoryNum=r.get("telegramNum")
+    print "history"+str(getHistoryNum)
     chat_id="-279383587"
 
     botApi=botApi()
     getLastNum=botApi.getGroupNumberNow(chat_id)
+    print "lastnum"+str(getLastNum)
     #r.set("telegramNum",getLastNum)
 
     if int(getLastNum)>int(getHistoryNum):
