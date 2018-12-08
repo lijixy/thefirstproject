@@ -17,6 +17,7 @@ for ($i = 0; $i < $telegram->UpdateCount(); $i++) {
     $telegram->serveUpdate($i);
     $text = $telegram->Text();
     $chat_id = $telegram->ChatID();
+	echo $chat_id;
 
     if ($text == '/start') {
         $reply = 'Working';
