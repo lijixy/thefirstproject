@@ -31,7 +31,7 @@ if __name__=="__main__":
     getLastNum=botApi.getGroupNumberNow(chat_id)
     r.set("telegramNum",getLastNum)
 
-    if int(getLastNum)>int(getHistoryNum):
+    if int(getLastNum)!=int(getHistoryNum):
         result=botApi.senMessage(chat_id,message="Hello-new-people!")
         if result:
             print "new people!"
