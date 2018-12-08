@@ -1,0 +1,20 @@
+============[Date]============
+[ 2018-12-08 06:35:55  UTC ] 
+==========[Response]==========
+ok:			False
+curl_error_code:		7
+curl_error:		Failed to connect to api.telegram.org port 443: Timed out
+=========[Sent Data]==========
+[ref]
+ref.offset= 0
+ref.limit= 100
+ref.timeout= 0
+
+
+============[Trace]===========
+#0 C:\phpStudy\PHPTutorial\WWW\gongxiang\thefirstproject\public\telegram\telegram.php(3097): TelegramErrorLogger::log(Array, Array)
+#1 C:\phpStudy\PHPTutorial\WWW\gongxiang\thefirstproject\public\telegram\telegram.php(103): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\phpStudy\PHPTutorial\WWW\gongxiang\thefirstproject\public\telegram\telegram.php(2976): Telegram->endpoint('getUpdates', Array)
+#3 C:\phpStudy\PHPTutorial\WWW\gongxiang\thefirstproject\public\telegram\getUpdates.php(14): Telegram->getUpdates()
+#4 {main}
+
