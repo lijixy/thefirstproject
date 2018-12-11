@@ -6,7 +6,8 @@ from config import configinit
 
 class botApi:
     def __init__(self):
-        self.token_api_key="bot609116902:AAHT0wmU_k1ICQ6s3aLQBpaoEUy4CDSXhcY"
+        #self.token_api_key="bot609116902:AAHT0wmU_k1ICQ6s3aLQBpaoEUy4CDSXhcY"
+        self.token_api_key="bot669442486:AAFl8jrdsOgHvAIX26ZZs0ugls7v7XXAfwM"
 
     def getGroupNumberNow(self,chat_id):
         url="https://api.telegram.org/"+self.token_api_key+"/getChatMembersCount?chat_id="+chat_id
@@ -26,7 +27,8 @@ if __name__=="__main__":
     r = confignew.getRedisInit()
     getHistoryNum=r.get("telegramNum")
     print "history"+str(getHistoryNum)
-    chat_id="-279383587"
+    #chat_id="-279383587"
+    chat_id="-326622890"
 
     botApi=botApi()
     getLastNum=botApi.getGroupNumberNow(chat_id)
