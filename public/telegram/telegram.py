@@ -37,7 +37,7 @@ if __name__=="__main__":
 
     if int(getLastNum)>int(getHistoryNum):
         r.set("telegramNum", getLastNum)
-        result=botApi.senMessage(chat_id,message="Hello-new-people!")
+        result=botApi.senMessage(chat_id,message="Welcome to ELLIPAL Global!\nPlease click the link to receive CCT->\nhttp://wallet.ellipal.com/award?type=telegram")
         if result:
             print "new people!"
             quit()
