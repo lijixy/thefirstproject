@@ -58,7 +58,7 @@ contract Actionjoin {
         //require(activityEndTime==0,"activity is not started!");
         //判断转账是否发生在互动期限期间
         //require(block.timestamp<activityEndTime,"activity is allready done!");
-        //actionSetAddr.transfer(msg.value);
+        //actionSetAddr.send(msg.value);
         
         joinActivity[count]=msg.sender;
         joinPeoples[lastJoinNum++]=msg.sender;   //lastJoinNum当前参与的所有人数

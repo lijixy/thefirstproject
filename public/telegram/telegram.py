@@ -28,7 +28,13 @@ if __name__=="__main__":
     getHistoryNum=r.get("telegramNum")
     print "history"+str(getHistoryNum)
     #chat_id="-279383587"
+    #-1001379081728
     chat_id="-326622890"
+
+    #Welcome to ELLIPAL Global!
+
+    #As gift, please click the link to receive CCT:
+    #http://wallet.ellipal.com/award?type=telegram
 
     botApi=botApi()
     getLastNum=botApi.getGroupNumberNow(chat_id)
@@ -37,7 +43,7 @@ if __name__=="__main__":
 
     if int(getLastNum)>int(getHistoryNum):
         r.set("telegramNum", getLastNum)
-        result=botApi.senMessage(chat_id,message="Welcome to ELLIPAL Global!\nPlease click the link to receive CCT->\nhttp://wallet.ellipal.com/award?type=telegram")
+        result=botApi.senMessage(chat_id,message="Welcome to ELLIPAL Global!\n\nAs gift, please click the link to receive CCT:\nhttp://wallet.ellipal.com/award?type=telegram")
         if result:
             print "new people!"
             quit()
