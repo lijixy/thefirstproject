@@ -6,7 +6,7 @@ from config import configinit
 
 class botApi:
     def __init__(self):
-        self.token_api_key=""
+        self.token_api_key = "bot669442486:AAFl8jrdsOgHvAIX26ZZs0ugls7v7XXAfwM"
 
     def getGroupNumberNow(self,chat_id):
         url="https://api.telegram.org/"+self.token_api_key+"/getChatMembersCount?chat_id="+chat_id
