@@ -42,7 +42,7 @@ if __name__=="__main__":
 
     if int(getLastNum)>int(getHistoryNum):
         r.set("telegramNum", getLastNum)
-        result=botApi.senMessage(chat_id,message="Welcome to ELLIPAL Global!\n\nAs gift, please click the link to receive CCT:\nhttp://wallet.ellipal.com/award?type=telegram")
+        result=botApi.senMessage(chat_id,message="Welcome to ELLIPAL Telegram group.\n\nPLEASE READ: \nBecareful of scammers, ELLIPAL team will never ask for your personal information or ask you for deposits. We also will not actively ask you if you have any problems. These are our official admins you can talk to: @Ellipal001 @ELLIPALteam @laurenELLIPAL. \n\nScammers can use similar letters to fake the username so please still be careful eventhough it looks the same.")
         if result:
             print "new people!"
             quit()
